@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3z)cbjntko_j-3_bkqe0%*a#59-9ls8uvk=m!8f2u$*ejc2mwt
 DEBUG = False
 
 ALLOWED_HOSTS = ['zyd8.pythonanywhere.com']
-
+# test
 
 # Application definition
 
