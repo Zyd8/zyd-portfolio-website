@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Home</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+
+    <style>
+        .navbar-radius {
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+        }
+
+        .footer-radius {
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+
+        .window-radius {    
+            border-radius: 16px;
+        }
+
+        .body-background {
+            background-color: #111111;
+        }
+
+        .header-background, .footer-background {
+            background-color: #242425;
+        }
+
+        .window-background {
+            background-color: #1E1E1E;
+        }
+        .navitem-selected {
+            background-color: #1E1E1E;
+            border-radius: 40px;
+        }
+        .nav-link {
+            padding: 20px;
+        }
+        .navbar-nav .nav-link {
+            margin: 0 10px; /* Adjust the value to increase/decrease spacing */
+        }
+        h1 {
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body class="body-background">
+
+    <div class="my-4"></div>
+
+    
+    <div class="container-lg">
+        <div class="row m-3 justify-content-center">
+
+
+            <!-- Left Column -->
+            <div class="col-lg-8 col-md-12 col-sm-12 window-radius window-background m-3 p-0">
+                <nav class="navbar navbar-expand-sm header-background navbar-radius p-4 m-0 w-100" data-bs-theme="dark">
+                    <div class="container-fluid p-0">
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link text-white active navitem-selected" aria-current="page" href="#">Home</a>
+                                <a class="nav-link text-white" href="#">Features</a>
+                                <a class="nav-link text-white" href="#">Pricing</a>
+                                <a class="nav-link text-white disabled" aria-disabled="true">Disabled</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+        
+
+                <div class="row p-4">
+                    <h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1>
+                    <h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1>
+                </div>
+
+
+                <div class="row footer-radius footer-background d-flex justify-content-center align-items-center m-0">
+                    <p class="text-white text-center p-4" style="margin: auto;">All rights reserved</p>
+                </div>
+                
+            </div>
+
+
+
+            
+            <!-- Sticky Right Column -->
+            <div class="col-lg-3 col-md-12 col-sm-12 sticky-top m-3 mt-5 window-background window-radius" style="height: calc(100vh - 8rem);">
+                
+                <h1>John Doe</h1>
+                
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
