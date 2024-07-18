@@ -12,13 +12,13 @@
         .navbar-radius {
             border-top-right-radius: 16px;
             border-top-left-radius: 16px;
-            border-bottom-right-radius: 40px;
-            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
         }
 
         .footer-radius {
-            border-top-right-radius: 40px;
-            border-top-left-radius: 40px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
             border-bottom-right-radius: 16px;
             border-bottom-left-radius: 16px;
         }
@@ -31,7 +31,7 @@
             background-color: #111111;
         }
 
-        .header-background, .footer-background {
+        .primary-background, .footer-background {
             background-color: #242425;
         }
 
@@ -46,12 +46,86 @@
             padding: 20px;
         }
         .navbar-nav .nav-link {
-            margin: 0 10px; /* Adjust the value to increase/decrease spacing */
+            margin: 0 20px;
         }
         h1 {
             color: white;
         }
+        .lead {
+            color: #ccc; 
+            font-size: 1.25rem; 
+        }
+        .custom-hr-center {
+            border: 3px solid #E13527;
+            width: 100px;
+            margin: 0 auto; 
+            margin-top: 10px; 
+            margin-bottom: 20px;
+        }
+        .custom-hr-left {
+            border: 3px solid #E13527;
+            width: 60px;
+            margin-top: 10px; 
+            margin-bottom: 20px;
+        }
+        .card-accent-right {
+            border-right: 5px solid #E13527;
+        }
+        .custom-blockquote {
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-size: 1.25rem;
+            border-left: 5px solid #E13527; 
+            background-color: #1E1E1E; 
+            color: #ccc; 
+        }
+        .custom-blockquote p {
+            margin: 0;
+        }
+        .profile-pic-container {
+            position: relative;
+            text-align: center;
+            margin-top: -50px;
+            /* height: 160px; */
+        }
+        .profile-pic {
+            padding: 16px;
+            background-color: #1E1E1E;
+            width: 180px; 
+            /* height: 150px;  */
+            object-fit: cover; 
+            border-radius: 40px;
+        }
+        .role {
+            background-color: #242425;
+            margin: 0; 
+            padding: 5px 10px; 
+        }
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #242425;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .spacing {
+            margin-top: 20px;
+        }
+        .contacts {
+            height: 600px;
+        }
+        body {
+            font-family: "Montserrat";
+        }
+        p {
+            line-height: 1.6;
+        }
 
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        
     </style>
 
 </head>
@@ -60,48 +134,207 @@
     <div class="my-4"></div>
 
     
-    <div class="container-lg">
-        <div class="row m-3 justify-content-center">
+    <div class="container-fluid">
+        <div class="row justify-content-center m-3">
 
 
             <!-- Left Column -->
-            <div class="col-lg-8 col-md-12 col-sm-12 window-radius window-background m-3 p-0">
-                <nav class="navbar navbar-expand-sm header-background navbar-radius p-4 m-0 w-100" data-bs-theme="dark">
+            <div class="col-lg-8 col-md-12 col-sm-12 window-radius window-background m-4 p-0">
+                <nav class="navbar navbar-expand-sm primary-background navbar-radius p-4 m-0 w-100" data-bs-theme="dark">
                     <div class="container-fluid p-0">
-                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler ms-auto mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link text-white active navitem-selected" aria-current="page" href="#">Home</a>
-                                <a class="nav-link text-white" href="#">Features</a>
-                                <a class="nav-link text-white" href="#">Pricing</a>
-                                <a class="nav-link text-white disabled" aria-disabled="true">Disabled</a>
+                                <a class="nav-link text-white active navitem-selected" aria-current="page" href="#">About</a>
+                                <a class="nav-link text-white" href="#">Projects</a>
+                                <a class="nav-link text-white" href="#">Resume</a>
+                                <a class="nav-link text-white" href="#">IOT</a>
                             </div>
                         </div>
                     </div>
                 </nav>
         
 
-                <div class="row p-4">
-                    <h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1>
-                    <h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1>
+                <div class="container-fluid p-4">
+                    <!-- Title and Description Area -->
+                    <div class="text-center mt-3">
+                        <h1>About me</h1>
+                        <p class="lead text-white">Discover my projects, experience, and the world of IoT</p>
+                    </div>
+
+                    <p class="custom-hr-center"></p>
+                
+                    <!-- Main Content Area -->
+                    <div class="row">
+
+                        <!--Regular Description-->
+                        <div class="col-12 mt-4">
+                            <p class="text-white">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium hic delectus illo voluptatibus soluta totam assumenda repudiandae quia rem, corrupti ad recusandae alias adipisci, numquam blanditiis saepe? Amet, reprehenderit tempora!
+                            </p>
+                        </div>
+                        
+                        <!--Regular Title-->
+                        <div class="col-12 mt-4">
+                            <h3 class="text-white text-left">
+                               My Passions
+                            </h3>
+                            <p class="custom-hr-left"></p>  
+                        </div>
+
+
+                        <!--Cards-->
+                        <div class="container col-12">
+                            <div class="row d-flex justify-content-around">
+                        
+                                <div class="card card-accent-right primary-background col-lg-5 col-md-5 col-sm-12 mb-4" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="..." class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body text-white">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="card card-accent-right primary-background col-lg-5 col-md-5 col-sm-12 mb-4" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="..." class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body text-white">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card card-accent-right primary-background col-lg-5 col-md-5 col-sm-12 mb-4" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="..." class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body text-white">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="card card-accent-right primary-background col-lg-5 col-md-5 col-sm-12 mb-4" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="..." class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body text-white">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+
+
+                        <!--Notice-->
+                        <div class="container mt-4">
+                            <blockquote class="custom-blockquote">
+                                Under Maintenance
+                            </blockquote>
+                        </div>
+
+                        <div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>                       
+                        </div>
+
+
+                    </div>
                 </div>
 
+                
 
-                <div class="row footer-radius footer-background d-flex justify-content-center align-items-center m-0">
+
+                <!-- <div class="row footer-radius footer-background d-flex justify-content-center align-items-center m-0">
                     <p class="text-white text-center p-4" style="margin: auto;">All rights reserved</p>
-                </div>
+                </div> -->
                 
             </div>
 
-
-
-            
             <!-- Sticky Right Column -->
-            <div class="col-lg-3 col-md-12 col-sm-12 sticky-top m-3 mt-5 window-background window-radius" style="height: calc(100vh - 8rem);">
+            <div class="col-lg-3 col-md-12 col-sm-12 sticky-top m-3 mt-5 window-background window-radius" style="height: calc(100vh - 8rem); overflow: auto;">
                 
-                <h1>John Doe</h1>
+                <!--Profile pic-->
+                <div class="container-fluid p-0">
+
+                    <div class="row navbar-radius primary-background" style="height: 90px;">
+
+                    </div>
+
+                    <div class="row profile-pic-container d-flex justify-content-center">
+                        <img src="{% static 'assets/prof.png' %}" class="profile-pic" alt="profile picture">
+                    </div>
+
+                </div>
+
+                <!--Name and Role-->
+                <div class="row">
+                    <h4 class="text-light text-center">John Doe</h3>
+                    <p class="role text-white text-center mt-3">Software Developer</p>
+                </div>
+
+                <p class="custom-hr-center mt-4 mb-4"></p>
+                <div class="spacing"></div>
+
+
+                <!-- Contacts -->
+                <div class="container-fluid contacts d-flex flex-column justify-content-around">
+                    <div class="row mb-3">
+                        <div class="col-12 d-flex align-items-center flex-column">
+                            <img class="contact-icon me-2" src="{% static 'assets/email.png' %}" alt="">
+                            <p class="text-white mb-0">JohnDoeJohn@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 d-flex align-items-center flex-column">
+                            <img class="contact-icon me-2" src="{% static 'assets/phone.png' %}" alt="">
+                            <p class="text-white mb-0">(+63)9053044125</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 d-flex align-items-center flex-column">
+                            <img class="contact-icon me-2" src="{% static 'assets/github.png' %}" alt="">
+                            <p class="text-white mb-0">Zyd8</p>
+                        </div>
+                    </div>
+                </div>
+
+
                 
             </div>
         </div>
