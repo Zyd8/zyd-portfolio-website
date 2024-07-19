@@ -41,9 +41,12 @@
         .navitem-selected {
             background-color: #1E1E1E;
             border-radius: 40px;
+            border: 1px groove #E13527;
+            box-shadow: inset 0 0 5px #E13527;
+            color: white; 
         }
         .nav-link {
-            padding: 20px;
+            padding: 22px;
         }
         .navbar-nav .nav-link {
             margin: 0 20px;
@@ -55,21 +58,33 @@
             color: #ccc; 
             font-size: 1.25rem; 
         }
+        .card {
+            box-shadow: inset 0 0 5px #E13527;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .card-shadow {
+            box-shadow: inset 0 0 5px #E13527;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
         .custom-hr-center {
-            border: 3px solid #E13527;
+            border: 2px solid #E13527;
             width: 100px;
             margin: 0 auto; 
             margin-top: 10px; 
             margin-bottom: 20px;
+            border-radius: 10px;
         }
         .custom-hr-left {
-            border: 3px solid #E13527;
+            border: 2px solid #E13527;
             width: 60px;
             margin-top: 10px; 
             margin-bottom: 20px;
+            border-radius: 10px;
         }
         .card-accent-right {
-            border-right: 5px solid #E13527;
+            border-right: 3px solid #E13527;
         }
         .custom-blockquote {
             padding: 10px 20px;
@@ -95,7 +110,7 @@
             height: auto;
             object-fit: cover; 
             border-radius: 50%;
-            margin-top: -80px;
+            margin-top: -70px;
         }
         .role {
             background-color: #242425;
@@ -122,7 +137,7 @@
             position: sticky;
             top: 0; 
             height: 100vh; 
-            overflow-y: auto;
+            overflow-y: auto; 
         }
         .contact-item {
             margin-top: 10%;
@@ -142,11 +157,25 @@
         .right-column-order {
             order: 2;
         }
+        .passion-icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+        }
+        .passion-icon {
+            width: 80px;
+            height: 80px;
+        }
+        .credit-icon {
+            width: 120px;
+            height: 120px;
+        }
 
         @media (max-width: 992px) {
             .sticky-top {
                 height: auto;
-                position: static
+                position: static;
+                width: 400px;
             }
             .left-column-order {
                 order: 2
@@ -155,7 +184,6 @@
             .right-column-order {
                 order: 1;
             }
-
         }
 
     </style>
@@ -184,10 +212,10 @@
             <div class="col-lg-8 col-md-12 col-sm-12 window-radius window-background m-4 mb-0 p-0 left-column-order">
                 <nav class="navbar navbar-expand-sm primary-background navbar-radius p-4 m-0 w-100" data-bs-theme="dark">
                     <div class="container-fluid p-0">
-                        <button class="navbar-toggler ms-auto mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                        <div class="collapse navbar-collapse justify-content-center mt-4" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
                                 <a class="nav-link text-white active navitem-selected" aria-current="page" href="#">About</a>
                                 <a class="nav-link text-white" href="#">Projects</a>
@@ -201,15 +229,17 @@
 
                 <div class="container-fluid p-4">
                     <!-- Title and Description Area -->
-                    <div class="text-center mt-3">
+                    <div class="text-center mt-3 px-5">
                         <h1>About me</h1>
-                        <p class="lead text-white">Discover my projects, experience, and the world of IoT</p>
+                        <p class="lead text-white">
+                            Hi, I'm John Doe, a Computer Science student with too much free time and too curious for his own good.
+                        </p>
                     </div>
 
                     <p class="custom-hr-center"></p>
                 
                     <!-- Main Content Area -->
-                    <div class="row">
+                    <div>
 
                         <!--Regular Description-->
                         <div class="col-12 mt-4">
@@ -233,12 +263,12 @@
                         
                                 <div class="card card-accent-right primary-background col-lg-5 col-md-5 col-sm-12 mb-4" style="max-width: 540px;">
                                     <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img src="..." class="img-fluid rounded-start" alt="...">
+                                        <div class="col-md-4 passion-icon-container">
+                                            <img src="{% static 'assets/django.png' %}" class="passion-icon p-2 img-fluid rounded-start" alt="...">
                                         </div>
                                         <div class="col-md-8">
                                             <div class="card-body text-white">
-                                                <h5 class="card-title">Card title</h5>
+                                                <h5 class="card-title">Backend Development</h5>
                                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                             </div>
                                         </div>
@@ -247,12 +277,12 @@
                         
                                 <div class="card card-accent-right primary-background col-lg-5 col-md-5 col-sm-12 mb-4" style="max-width: 540px;">
                                     <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img src="..." class="img-fluid rounded-start" alt="...">
+                                        <div class="col-md-4 passion-icon-container">
+                                            <img src="{% static 'assets/cybersecurity.png' %}" class="passion-icon p-2 img-fluid rounded-start" alt="...">
                                         </div>
                                         <div class="col-md-8">
                                             <div class="card-body text-white">
-                                                <h5 class="card-title">Card title</h5>
+                                                <h5 class="card-title">Cybersecurity</h5>
                                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                             </div>
                                         </div>
@@ -261,12 +291,12 @@
 
                                 <div class="card card-accent-right primary-background col-lg-5 col-md-5 col-sm-12 mb-4" style="max-width: 540px;">
                                     <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img src="..." class="img-fluid rounded-start" alt="...">
+                                        <div class="col-md-4 passion-icon-container">
+                                            <img src="{% static 'assets/linux.png' %}" class="passion-icon p-2 img-fluid rounded-start" alt="...">
                                         </div>
                                         <div class="col-md-8">
                                             <div class="card-body text-white">
-                                                <h5 class="card-title">Card title</h5>
+                                                <h5 class="card-title">Operating Systems</h5>
                                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                             </div>
                                         </div>
@@ -275,12 +305,12 @@
                         
                                 <div class="card card-accent-right primary-background col-lg-5 col-md-5 col-sm-12 mb-4" style="max-width: 540px;">
                                     <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img src="..." class="img-fluid rounded-start" alt="...">
+                                        <div class="col-md-4 passion-icon-container">
+                                            <img src="{% static 'assets/arduino.png' %}" class="passion-icon p-2 img-fluid rounded-start" alt="...">
                                         </div>
                                         <div class="col-md-8">
                                             <div class="card-body text-white">
-                                                <h5 class="card-title">Card title</h5>
+                                                <h5 class="card-title">DIY Electronics</h5>
                                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                             </div>
                                         </div>
@@ -291,26 +321,127 @@
                         </div>
 
 
+                        <!--Regular Title-->
+                        <div class="col-12 mt-4">
+                            <h3 class="text-white text-left">
+                                Level of Expertise
+                            </h3>
+                            <p class="custom-hr-left"></p>  
+                        </div>
+
+                        <!--Expertise Progress Bars-->
+                        <div class="container col-12 px-5">
+                            <div class="row d-flex justify-content-around">
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                    <div class="card primary-background">
+                                        <div class="row g-0">
+                                            <div class="col-md-3 passion-icon-container">
+                                                <img src="{% static 'assets/django.png' %}" class="passion-icon p-2 img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="card-body text-white">
+                                                    <h5 class="card-title">Backend Development</h5>
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                    <div class="card primary-background">
+                                        <div class="row g-0">
+                                            <div class="col-md-3 passion-icon-container">
+                                                <img src="{% static 'assets/django.png' %}" class="passion-icon p-2 img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="card-body text-white">
+                                                    <h5 class="card-title">Backend Development</h5>
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                    <div class="card primary-background">
+                                        <div class="row g-0">
+                                            <div class="col-md-3 passion-icon-container">
+                                                <img src="{% static 'assets/django.png' %}" class="passion-icon p-2 img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="card-body text-white">
+                                                    <h5 class="card-title">Backend Development</h5>
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!--Regular Title-->
+                        <div class="col-12 mt-4">
+                            <h3 class="text-white text-left">
+                                Website Stands on the Shoulders of
+                            </h3>
+                            <p class="custom-hr-left"></p>  
+                        </div>
+
+                        <!--Website Credit-->
+                        <div class="px-5">
+                            <ul class="list-group card-shadow">
+                                <li class="list-group-item primary-background text-white" style="border: 0;">
+                                    <div class="container-fluid my-2">
+                                        <p>Hosting</p>
+                                        <div class="row d-flex justify-content-end">
+                                            <img class="col-sm-4" width="250px" height="100px"  style="border-radius: 10px;" src="{% static 'assets/pythonanywhere.png' %}" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item primary-background text-white" style="border: 0;">
+                                    <div class="container-fluid my-2">
+                                        <p>DNS</p>
+                                        <div class="row d-flex justify-content-end">
+                                            <img class="col-sm-4 credit-icon" style="border-radius: 10px;" src="{% static 'assets/cloudflare.png' %}" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item primary-background text-white container-fluid" style="border: 0;">
+                                    <div class="container-fluid my-2">
+                                        <p>Frontend</p>
+                                        <div class="row d-flex justify-content-end">
+                                            <img class="col-sm-3 credit-icon" src="{% static 'assets/html.png' %}" alt="">
+                                            <img class="col-sm-3 credit-icon" src="{% static 'assets/css.png' %}" alt="">
+                                            <img class="col-sm-3 credit-icon" src="{% static 'assets/js.png' %}" alt="">
+                                            <img class="col-sm-3 credit-icon" src="{% static 'assets/bootstrap1.png' %}" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item primary-background text-white" style="border: 0;">
+                                    <div class="container-fluid my-2">
+                                        <p>Backend</p>
+                                        <div class="row d-flex justify-content-end">
+                                            <img class="credit-icon" src="{% static 'assets/django-credit.png' %}" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                      
+                        
+
+
                         <!--Notice-->
                         <div class="container mt-4">
                             <blockquote class="custom-blockquote">
                                 Under Maintenance
                             </blockquote>
-                        </div>
-
-                        <div>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>                       
                         </div>
 
 
@@ -327,12 +458,12 @@
             </div>
 
           <!-- Sticky Right Column -->
-            <div class="col-lg-3 col-md-12 col-sm-12 sticky-top m-3 mt-5 window-background window-radius align-items-center right-column-order">
+            <div class="col-lg-3 col-md-12 col-sm-12 sticky-top m-3 mt-lg-5 mt-md-1 window-background window-radius align-items-center right-column-order">
                 
                 <!--Profile pic-->
                 <div class="container-fluid p-0">
-                    <div class="row navbar-radius primary-background" style="height: 90px;">
-                        <!-- Navbar content (if any) -->
+                    <div class="row navbar-radius primary-background" style="height: 110px;">
+                        
                     </div>
 
                     <div class="row profile-pic-container d-flex justify-content-center mt-3">
