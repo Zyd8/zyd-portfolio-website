@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3z)cbjntko_j-3_bkqe0%*a#59-9ls8uvk=m!8f2u$*ejc2mwt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ 'zyldjan.lanticse.me', 'lanticse.me', '127.0.0.1']
 # 'zydev.pythonanywhere.com',

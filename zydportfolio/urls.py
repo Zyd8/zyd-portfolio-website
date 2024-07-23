@@ -20,6 +20,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name="home"),
+    path('', views.about, name="about"),
+    path('resume', views.resume, name="resume"),
     path('iot/', include("iot.urls"))
 ]
