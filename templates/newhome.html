@@ -119,13 +119,17 @@
             background-color: #242425;
             margin: 0; 
             padding: 5px 10px; 
+            box-shadow: inset 0 0 5px #E13527;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+
         }
         .contact-icon {
             width: 80px;
             height: auto;
             background-color: #242425;
-            border-radius: 50%;
-            padding: 10px;
+            border-radius: 30%;
+            padding: 20px;
         }
         .spacing {
             margin-top: 20px;
@@ -182,8 +186,8 @@
             height: 60px;
         }
         .credit-icon {
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
         }
 
         @media (max-width: 992px) {
@@ -220,8 +224,7 @@
 
     
     <div class="container-fluid">
-        <div class="row justify-content-center m-3">
-
+        <div class="row justify-content-center m-3 mb-5">
 
             <!-- Left Column -->
             <div class="col-lg-8 col-md-12 col-sm-12 window-radius window-background m-4 mb-0 p-0 left-column-order">
@@ -240,11 +243,17 @@
                         </div>
                     </div>
                 </nav>
-        
+
+                <!--Notice-->
+                <div class="container-fluid mt-4">
+                    <blockquote class="custom-blockquote">
+                        Under Construction
+                    </blockquote>
+                </div>       
 
                 <div class="container-fluid p-4">
                     <!-- Title and Description Area -->
-                    <div class="text-center mt-3 px-3">
+                    <div class="text-center mt-2 px-3">
                         <h1>About me</h1>
                         <p class="lead text-white">
                             Hi, I'm John Doe, a Computer Science student with too much free time and too curious for his own good.
@@ -349,7 +358,7 @@
                         <div class="container col-12 px-2 primary-background window-radius">
 
                             <!--Backend Framework Expertise Progress Bars-->
-                            <div class="row d-flex justify-content-center p-3 pt-4">
+                            <div class="row d-flex justify-content-around p-3 pt-4">
 
                                 <h5 class="col-12 text-white text-left">
                                     Backend Frameworks
@@ -396,7 +405,7 @@
                             <div class="my-2"></div>
 
                              <!--Frontend Framework Expertise Progress Bars-->
-                             <div class="row d-flex justify-content-center  p-3">
+                             <div class="row d-flex justify-content-around  p-3">
 
                                 <h5 class="col-12 text-white text-left">
                                     Frontend Frameworks
@@ -478,7 +487,7 @@
 
 
                                 <!--Languages Expertise Progress Bars-->
-                                <div class="row d-flex justify-content-center  p-3">
+                                <div class="row d-flex justify-content-around  p-3">
 
                                     <h5 class="col-12 text-white text-left">
                                         Languages
@@ -590,7 +599,7 @@
                         </div>
 
                         <!--Website Credit-->
-                        <div class="container px-2">
+                        <div class="container px-2 mb-4">
                             <ul class="list-group card-shadow">
                                 <li class="list-group-item primary-background text-white" style="border: 0;">
                                     <div class="container-fluid my-2">
@@ -629,18 +638,7 @@
                                 </li>
                             </ul>
                         </div>
-                      
-                        
-
-
-                        <!--Notice-->
-                        <div class="container mt-4">
-                            <blockquote class="custom-blockquote">
-                                Under Construction
-                            </blockquote>
-                        </div>
-
-
+                                  
                     </div>
                 </div>
 
@@ -669,8 +667,8 @@
 
                 <!--Name and Role-->
                 <div class="row mt-2 mb-3 text-center">
-                    <h4 class="text-light">John Doe</h4>
-                    <p class="role text-white mt-3">Software Developer</p>
+                    <h4 class="text-light">Zyldjan Lanticse</h4>
+                    <p class="role text-white mt-3">Software Engineer</p>
                 </div>
 
                 <div class="custom-hr-center mt-4 mb-4"></div>
@@ -680,22 +678,22 @@
                 <div class="contacts container-fluid d-flex flex-column justify-content-around">
                     <div class="row mb-5">
                         <div class="col-12 contact-item d-flex align-items-center flex-column">
-                            <img class="contact-icon me-2" src="{% static 'assets/email.png' %}" alt="">
-                            <p class="text-white mb-0">JohnDoeJohn@gmail.com</p>
+                            <img class="contact-icon" src="{% static 'assets/contact-email.png' %}" alt="">
+                            <p class="text-white mb-0 text-center">zyldjan.lanticse.dev@gmail.com</p>
                         </div>
                     </div>
 
                     <div class="row mb-5">
                         <div class="col-12 contact-item d-flex align-items-center flex-column">
-                            <img class="contact-icon me-2" src="{% static 'assets/phone.png' %}" alt="">
-                            <p class="text-white mb-0">(+63)9053044125</p>
+                            <img class="contact-icon" src="{% static 'assets/contact-phone.png' %}" alt="">
+                            <p class="text-white mb-0 text-center">(+63)9053044125</p>
                         </div>
                     </div>
 
                     <div class="row mb-5">
                         <div class="col-12 contact-item d-flex align-items-center flex-column">
-                            <img class="contact-icon me-2" src="{% static 'assets/github.png' %}" alt="">
-                            <p class="text-white mb-0">Zyd8</p>
+                            <img class="contact-icon" src="{% static 'assets/github.png' %}" alt="">
+                            <p class="text-white mb-0 text-center">Zyd8</p>
                         </div>
                     </div>
                 </div>
