@@ -205,7 +205,7 @@ p {
     .sticky-top {
         height: auto;
         position: static;
-        width: 400px;
+        width: auto;
     }
     .left-column-order {
         order: 2;

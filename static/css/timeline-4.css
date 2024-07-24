@@ -39,7 +39,7 @@
 }
 
 .bsb-timeline-4 {
-    --bsb-tl-color: var(--bs-primary-bg-subtle);
+    --bsb-tl-color: #EEEEE6;
     --bsb-tl-circle-color: #E13527;;
     --bsb-tl-circle-border-color: #E13527;;
     --bsb-tl-circle-size: 16px;

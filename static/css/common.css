@@ -194,6 +194,9 @@ p {
 .education-icon {
     width: 80px;
     height: 80px;
+    background-color: #242425;
+    border-radius: 8px;
+    border: 3px solid #EEEEE6
 }
 @media (max-width: 768px) {
     .education-icon-container {
@@ -205,7 +208,7 @@ p {
     .sticky-top {
         height: auto;
         position: static;
-        width: 400px;
+        width: auto;
     }
     .left-column-order {
         order: 2;
