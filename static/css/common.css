@@ -68,6 +68,15 @@ h1 {
     margin-bottom: 20px;
     border-radius: 10px;
 }
+.custom-hr-center-small {
+    border: 2px solid #E13527;
+    width: 50px;
+    margin: 0 auto; 
+    margin-top: 10px; 
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
 .custom-hr-left {
     border: 2px solid #E13527;
     width: 60px;
@@ -200,6 +209,16 @@ p {
     border-radius: 8px;
     border: 2px solid #EEEEE6
 }
+.notableproject-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+.notableproject-icon {
+    width: 100px;
+    height: 100px;
+}
+
 @media (max-width: 768px) {
     .progress-icon-container {
         display: flex;
