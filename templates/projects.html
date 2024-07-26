@@ -1,0 +1,31 @@
+{% extends 'common.html' %}
+
+{% load static %}
+
+{% block title %} My Projects {% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-expand-sm primary-background navbar-radius p-4 m-0 w-100" data-bs-theme="dark">
+        <div class="container-fluid p-0">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center mt-4" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-white" href="{% url 'about' %}">About</a>
+                    <a class="nav-link text-white active navitem-selected" href="{% url 'projects' %}">Projects</a>
+                    <a class="nav-link text-white" aria-current="page" href="{% url 'resume' %}">Resume</a>
+                    <a class="nav-link text-white" href="#">IOT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Notice-->
+    <div class="container-fluid mt-4">
+        <blockquote class="custom-blockquote">
+            Under Construction. Please consider going to my <a href="https://github.com/Zyd8">Github</a> repo for all my projects
+        </blockquote>
+    </div>
+{% endblock %}
