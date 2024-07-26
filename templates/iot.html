@@ -39,8 +39,8 @@
             <div class="card card-accent-right primary-background p-2">
                 <div class="row g-0">
                     <div class="col-md-7 notableproject-icon-container">
-                        <img src="{% static 'assets/logo-hashdog.png' %}"
-                            class="notableproject-icon p-2 img-fluid" alt="...">
+                        <img src="{% static 'assets/iot-dht11.jpeg' %}"
+                            class="p-2 img-fluid" alt="...">
                     </div>
                     <div class="col-md-5">
                         <div class="card-body text-white">
@@ -48,6 +48,8 @@
                             <h5 class="progress-title text-left">Live PC Internal Temps</h5>
 
                             <p>
+                                <span class="badge rounded-pill" style="background-color: black;">ESP8266</span> 
+                                <span class="badge rounded-pill" style="background-color: brown;">DHT 11</span> 
                                 <span class="badge rounded-pill" style="background-color: darkcyan;">C++</span>
                                 <span class="badge rounded-pill" style="background-color: red;">Rest API</span>
                                 <span class="badge rounded-pill" style="background-color: blue;">Python</span> 
@@ -92,6 +94,6 @@
           .catch(error => console.error('Error:', error));
         }
   
-        setInterval(getCurrentData, 1000);
+        setInterval(getCurrentData, 5000);
     </script>
 {% endblock %}
