@@ -33,8 +33,41 @@
         </div>
 
         <p class="custom-hr-center"></p>
-    
-        
+
+
+        <div class="col-lg-12 col-md-12 col-sm-12 my-4">
+            <div class="card card-accent-right primary-background p-2">
+                <div class="row g-0">
+                    <div class="col-md-7 notableproject-icon-container">
+                        <img src="{% static 'assets/logo-hashdog.png' %}"
+                            class="notableproject-icon p-2 img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card-body text-white">
+
+                            <h5 class="progress-title text-left">Live PC Internal Temps</h5>
+
+                            <p>
+                                <span class="badge rounded-pill" style="background-color: darkcyan;">C++</span>
+                                <span class="badge rounded-pill" style="background-color: red;">Rest API</span>
+                                <span class="badge rounded-pill" style="background-color: blue;">Python</span> 
+                                <span class="badge rounded-pill" style="background-color: green;">Django</span> 
+                            </p>
+
+
+                            <div class="col-12 mt-2 mb-2 d-flex justify-content-start align-items-center">
+                                 <ul class="list-group text-decoration-none ">
+                                    <li class="list-group-item">Status: <b><span id="status"></span></b> </li>
+                                    <li class="list-group-item">Temperature: <b><span id="temperature"></span>°C</b></li>
+                                    <li class="list-group-item">Humidity: <b><span id="humidity"></span>%</b></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
 
     </div>
 
@@ -44,4 +77,21 @@
             More Coming Soon!
         </blockquote>
     </div>
+
+
+    <script>
+        function getCurrentData() {
+          fetch('/iot/get_current_data/')
+          .then(response => response.json())
+          .then(data => {
+              document.getElementById('status').innerText = data.status;
+              document.getElementById('temperature').innerText = data.temperature;
+              document.getElementById('humidity').innerText = data.humidity;
+  
+          })
+          .catch(error => console.error('Error:', error));
+        }
+  
+        setInterval(getCurrentData, 1000);
+    </script>
 {% endblock %}
