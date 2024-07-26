@@ -4,7 +4,6 @@
 
 {% block title %} My Resume {% endblock %}
 
-
 {% block content %}
     <nav class="navbar navbar-expand-sm primary-background navbar-radius p-4 m-0 w-100" data-bs-theme="dark">
         <div class="container-fluid p-0">
@@ -16,7 +15,7 @@
                     <a class="nav-link text-white" href="{% url 'about' %}">About</a>
                     <a class="nav-link text-white" href="{% url 'projects' %}">Projects</a>
                     <a class="nav-link text-white active navitem-selected" aria-current="page" href="{% url 'resume' %}">Resume</a>
-                    <a class="nav-link text-white" href="#">IOT</a>
+                    <a class="nav-link text-white" href="{% url 'iot' %}">IOT</a>
                 </div>
             </div>
         </div>
